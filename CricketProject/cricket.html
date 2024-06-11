@@ -1,0 +1,190 @@
+
+ <!--  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Website button implementation</title>
+  <link rel="stylesheet" href="cricket.css">
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button class="sameOnly" onclick="
+    // Generate a random number between 0 and 3
+    let randomNumber = Math.random() * 3; 
+    let computerChoice;
+    if (randomNumber > 0 && randomNumber <= 1) {
+      computerChoice = 'Bat';
+    } else if (randomNumber > 1 && randomNumber <= 2) {
+      computerChoice = 'Ball';
+    } else {
+      computerChoice = 'Stump';
+    }
+
+    let resultMsg;
+    if (computerChoice === 'Ball') {
+      resultMsg = 'User won.';
+    } else if (computerChoice === 'Bat') {
+      resultMsg = 'It\'s a tie';
+    } else if (computerChoice === 'Stump') {
+      resultMsg = 'Computer has won';
+    }
+
+    // Display a message with the user's choice, computer's choice, and result
+    alert(`You have chosen Bat. Computer choice is ${computerChoice} and ${resultMsg}`);
+  ">Bat</button>
+
+
+  <button class="sameOnly" onclick="
+    // Generate a random number between 0 and 3
+     randomNumber = Math.random() * 3; 
+     computerChoice;
+    if (randomNumber > 0 && randomNumber <= 1) {
+      computerChoice = 'Bat';
+    } else if (randomNumber > 1 && randomNumber <= 2) {
+      computerChoice = 'Ball';
+    } else {
+      computerChoice = 'Stump';
+    }
+
+   resultMsg;
+    if (computerChoice === 'Ball') {
+      resultMsg = 'It\'s a tie';
+    } else if (computerChoice === 'Bat') {
+      resultMsg = 'computer has won';
+    } else if (computerChoice === 'Stump') {
+      resultMsg = 'User won';
+    }
+
+    // Display a message with the user's choice, computer's choice, and result
+    alert(`You have chosen Ball. Computer choice is ${computerChoice} and ${resultMsg}`);
+">Ball</button>
+
+
+  <button class="sameOnly" onclick="
+    // Generate a random number between 0 and 3
+     randomNumber = Math.random() * 3; 
+     computerChoice;
+    if (randomNumber > 0 && randomNumber <= 1) {
+      computerChoice = 'Bat';
+    } else if (randomNumber > 1 && randomNumber <= 2) {
+      computerChoice = 'Ball';
+    } else {
+      computerChoice = 'Stump';
+    }
+
+     resultMsg;
+    if (computerChoice === 'Ball') {
+      resultMsg = 'Computer won';
+    } else if (computerChoice === 'Bat') {
+      resultMsg = 'user won';
+    } else if (computerChoice === 'Stump') {
+      resultMsg = 'Its a tie';
+    }
+
+    // Display a message with the user's choice, computer's choice, and result
+    alert(`You have chosen Stump. Computer choice is ${computerChoice} and ${resultMsg}`);
+ 
+  ">Stump</button>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Website button implementation</title>
+  <!-- <link rel="stylesheet" href="cricket.css"> -->
+  <style>
+    body{
+  text-align: center;
+  color: rgb(241, 7, 151);
+}
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+
+  <button class="sameOnly" onclick="
+    // Generate a random number between 0 and 3
+    randomNumber = Math.random() * 3; 
+    if (randomNumber > 0 && randomNumber <= 1) {
+      computerChoice = 'Bat';
+    } else if (randomNumber > 1 && randomNumber <= 2) {
+      computerChoice = 'Ball';
+    } else {
+      computerChoice = 'Stump';
+    }
+
+    if (computerChoice === 'Ball') {
+      resultMsg = 'User won.';
+    } else if (computerChoice === 'Bat') {
+      resultMsg = 'It\'s a tie';
+    } else if (computerChoice === 'Stump') {
+      resultMsg = 'Computer has won';
+    }
+
+    // Display a message with the user's choice, computer's choice, and result
+    alert(`You have chosen Bat. Computer choice is ${computerChoice} and ${resultMsg}`);
+  ">Bat</button>
+
+
+  <button class="sameOnly" onclick="
+    // Generate a random number between 0 and 3
+    randomNumber = Math.random() * 3; 
+    if (randomNumber > 0 && randomNumber <= 1) {
+      computerChoice = 'Bat';
+    } else if (randomNumber > 1 && randomNumber <= 2) {
+      computerChoice = 'Ball';
+    } else {
+      computerChoice = 'Stump';
+    }
+
+    if (computerChoice === 'Ball') {
+      resultMsg = 'It\'s a tie';
+    } else if (computerChoice === 'Bat') {
+      resultMsg = 'computer has won';
+    } else if (computerChoice === 'Stump') {
+      resultMsg = 'User won';
+    }
+
+    // Display a message with the user's choice, computer's choice, and result
+    alert(`You have chosen Ball. Computer choice is ${computerChoice} and ${resultMsg}`);
+">Ball</button>
+
+
+  <button class="sameOnly" onclick="
+    // Generate a random number between 0 and 3
+    randomNumber = Math.random() * 3; 
+    if (randomNumber > 0 && randomNumber <= 1) {
+      computerChoice = 'Bat';
+    } else if (randomNumber > 1 && randomNumber <= 2) {
+      computerChoice = 'Ball';
+    } else {
+      computerChoice = 'Stump';
+    }
+
+    if (computerChoice === 'Ball') {
+      resultMsg = 'Computer won';
+    } else if (computerChoice === 'Bat') {
+      resultMsg = 'user won';
+    } else if (computerChoice === 'Stump') {
+      resultMsg = 'Its a tie';
+    }
+
+    // Display a message with the user's choice, computer's choice, and result
+    alert(`You have chosen Stump. Computer choice is ${computerChoice} and ${resultMsg}`);
+ 
+  ">Stump</button>
+
+  <script>
+    // we are creating global let variables here cos everytime we use let for all button will not work with logic and functionalitywise so  this is necessary
+    let randomNumber;
+    let computerChoice;
+    let resultMsg;
+  </script>
+</body>
+</html>
+

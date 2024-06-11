@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+        body {
+		    height: 100%;
+            margin: 0;
+            padding: 0;
+            background: goldenrod;
+        }
+
+        .geeks {
+            border: 10px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-weight: 100px;
+            letter-spacing: 5px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .geeks span {
+            animation: animate 5s linear infinite;
+        }
+
+        .geeks span:nth-child(1) {
+            animation-delay: 4.8s;
+        }
+
+        .geeks span:nth-child(2) {
+            animation-delay: 4.3s;
+        }
+
+        .geeks span:nth-child(3) {
+            animation-delay: 4.1s;
+        }
+
+        .geeks span:nth-child(4) {
+            animation-delay: 3.8s;
+        }
+
+        .geeks span:nth-child(5) {
+            animation-delay: 3.4s;
+        }
+
+        .geeks span:nth-child(6) {
+            animation-delay: 3.0s;
+        }
+
+        .geeks span:nth-child(7) {
+            animation-delay: 2.8s;
+        }
+
+        .geeks span:nth-child(8) {
+            animation-delay: 2.3s;
+        }
+
+        .geeks span:nth-child(9) {
+            animation-delay: 2.2s;
+        }
+
+        .geeks span:nth-child(10) {
+            animation-delay: 2.0s;
+        }
+
+        .geeks span:nth-child(11) {
+            animation-delay: 1.8s;
+        }
+
+        .geeks span:nth-child(12) {
+            animation-delay: 1.5s;
+        }
+
+        .geeks span:nth-child(13) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes animate {
+            0% {
+                filter: blur(0);
+            }
+
+            40% {
+                filter: blur(20px);
+            }
+
+            80% {
+                filter: blur(0);
+            }
+
+            100% {
+                filter: blur(0);
+            }
+        }
+
+        .audio-button {
+            margin-top: 20px;
+            border-radius: 20px;
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="geeks">
+        <span><img src="prem n ketan.bmp" alt="img" width="200px" height="150px">
+					<img src="pragatiBaby.jpg" alt="img" width="200px">
+					<img src="sidd.jpg" alt="img" width="200px">
+
+
+            <button class="audio-button" onclick="play()"><strong> Audio</strong></button>
+        </span>
+    </div>
+
+    <audio id="audio" src="wavenet-audio.mp3" alt="xx" controls
+        loop></audio>
+
+    <script>
+        function play() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+</body>
+
+</html>

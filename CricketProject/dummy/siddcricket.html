@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Website button implementation</title>
+  <style>
+    body{
+  text-align: center;
+  color: rgb(241, 7, 151);
+}
+  </style>
+
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button class="sameOnly" onclick="playGame('Bat')">Bat</button>
+  <button class="sameOnly" onclick="playGame('Ball')">Ball</button>
+  <button class="sameOnly" onclick="playGame('Stump')">Stump</button>
+
+  <script>
+    function playGame(userChoice) {
+      // Generate a random number between 0 and 3
+      let randomNumber = Math.random() * 3; 
+      let computerChoice;
+      if (randomNumber > 0 && randomNumber <= 1) {
+        computerChoice = 'Bat';
+      } else if (randomNumber > 1 && randomNumber <= 2) {
+        computerChoice = 'Ball';
+      } else {
+        computerChoice = 'Stump';
+      }
+
+      let resultMsg;
+      if (computerChoice === userChoice) {
+        resultMsg = 'It\'s a tie';
+      } else if ((userChoice === 'Bat' && computerChoice === 'Ball') || (userChoice === 'Ball' && computerChoice === 'Stump') || (userChoice === 'Stump' && computerChoice === 'Bat')) {
+        resultMsg = 'User won.';
+      } else {
+        resultMsg = 'Computer has won';
+      }
+
+      // Display a message with the user's choice, computer's choice, and result
+      alert(`You have chosen ${userChoice}. Computer choice is ${computerChoice} and ${resultMsg}`);
+    }
+  </script>
+</body>
+</html>
